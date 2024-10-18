@@ -1,0 +1,4 @@
+Flask
+hypercorn
+aiohttp
+python-dotenv
