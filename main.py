@@ -10,7 +10,7 @@ bot_key = os.getenv("BOT_KEY")
 
 bot_url = f"https://api.telegram.org/bot{bot_key}"
 
-port = int(os.environ.get("PORT", 8000))
+port = os.getenv("PORT")
 
 app = Flask(__name__)
 
