@@ -18,6 +18,7 @@ ApplicationBuilder().token(bot_key).build()
 
 @app.route("/webhook", methods=["POST"])
 async def webhook():
+    print('reached')
     json_data = request.get_json()
     sender_name = json_data["message"]["from"]["first_name"]
     chat_id = json_data["message"]["from"]["id"]
