@@ -2,3 +2,4 @@ Flask
 hypercorn
 aiohttp
 python-dotenv
+python-telegram-bot

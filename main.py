@@ -1,3 +1,4 @@
+from telegram.ext import ApplicationBuilder
 from dotenv import load_dotenv
 import os
 from reply_text import reply_text
@@ -13,6 +14,8 @@ bot_url = f"https://api.telegram.org/bot{bot_key}"
 port = os.getenv("PORT")
 
 app = Flask(__name__)
+
+ApplicationBuilder().token(bot_key).build()
 
 
 @app.route("/webhook", methods=["POST"])
