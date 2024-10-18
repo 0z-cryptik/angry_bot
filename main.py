@@ -11,8 +11,6 @@ bot_key = os.getenv("BOT_KEY")
 
 bot_url = f"https://api.telegram.org/bot{bot_key}"
 
-port = os.getenv("PORT")
-
 app = Flask(__name__)
 
 ApplicationBuilder().token(bot_key).build()
@@ -31,7 +29,3 @@ async def webhook():
         reply = curses_func(sender_name, message)
     await reply_text(chat_id, reply)
     return "ok"
-
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=port)
